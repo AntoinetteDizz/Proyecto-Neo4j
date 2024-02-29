@@ -45,7 +45,7 @@
         <div class="menu container">
 
             <!-- Enlace simulacro para el logo -->
-            <a href="" class="logo">SUPERMARKET</a>
+            <a href="" class="logo">ARBOL GENEALOGICO</a>
 
             <input type="checkbox" id="menu"/>
 
@@ -59,18 +59,35 @@
 
                 <!-- Lista de enlaces -->
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Clientes</a></li>
-                    <li><a href="">Productos</a></li>
-                    <li><a href="">Facturas</a></li>
-                    <li><a href="">Cerrar Sesión</a></li>
+                    <li><a href="">Crear</a></li>
+                    <li><a href="">Eliminar</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <h1>Resultados de las consultas Neo4j</h1>
 
-    
+    <h2>Consulta 1: Obtener todas las personas con sus relaciones</h2>
+    <ul>
+    {% for record in query1_result %}
+        <li>{{ record }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Consulta 2: Encontrar todas las personas casadas</h2>
+    <ul>
+    {% for record in query2_result %}
+        <li>{{ record }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Consulta 3: Encontrar todas las personas que son padres</h2>
+    <ul>
+    {% for record in query3_result %}
+        <li>{{ record }}</li>
+    {% endfor %}
+    </ul>    
 
     <div class="mb-5"></div>
 
